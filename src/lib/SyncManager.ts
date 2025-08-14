@@ -60,7 +60,6 @@ function initializeSynchronizer() {
 export function addToSync(
   renderingEngineId: string,
   viewportId: string,
-  initialCamera?: any
 ) {
   const sync = initializeSynchronizer();
   if (sync && sharedRenderingEngine) {
@@ -69,12 +68,6 @@ export function addToSync(
       if (viewport) {
         sync.addSource({ renderingEngineId, viewportId });
         sync.addTarget({ renderingEngineId, viewportId });
-
-        // 🔹 If an initial camera is given, set it immediately
-        if (initialCamera) {
-          (viewport as StackViewport).setCamera(initialCamera);
-          sharedRenderingEngine.renderViewports([viewportId]);
-        }
       }
     } catch (error) {
       console.warn('Error adding to sync:', error);
