@@ -229,8 +229,8 @@ const Viewer: React.FC<ViewerProps> = ({
       <div
         ref={divRef}
         style={{ 
-          width: 256, 
-          height: 256, 
+          width: 400, 
+          height: 400, 
           backgroundColor: 'black',
           position: 'relative'
         }}
@@ -240,9 +240,9 @@ const Viewer: React.FC<ViewerProps> = ({
           <div
             style={{
               position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
+              top: '50vh',
+              left: '50vw',
+              // transform: 'translate(-50%, -50%)',
               color: 'white',
               fontSize: 12,
               pointerEvents: 'none',
@@ -274,12 +274,14 @@ const Viewer: React.FC<ViewerProps> = ({
           </div>
         )}
       </div>
-      <div style={{ fontSize: 12, marginTop: 4 }}>
+      <div style={{ fontSize: 16, marginTop: 4,display:'flex',justifyContent:'space-between',alignItems:'center' }}>
+      <div style={{ display:'flex',justifyContent:'space-between',alignItems:'center',gap:10 }}>
+
         <div>
           Zoom: {zoom.toFixed(2)}x
           {isLoading && ' (Loading...)'}
         </div>
-        <label style={{ display: 'block', marginTop: 4 }}>
+        <label style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
           <input
             type="checkbox"
             checked={sync}
@@ -288,8 +290,9 @@ const Viewer: React.FC<ViewerProps> = ({
           />
           <span style={{ marginLeft: 4 }}>Sync Zoom</span>
         </label>
+        </div>
         <button 
-          style={{ marginTop: 4, fontSize: 11 }} 
+          style={{ marginTop: 4, fontSize: 14 }} 
           onClick={handleRemove}
           disabled={isLoading}
         >

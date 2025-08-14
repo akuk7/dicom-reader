@@ -205,13 +205,13 @@ const Home: React.FC = () => {
   }
 
   return (
-    <div style={{ padding: 20 }}>
-      <h2>DICOM Multi-Viewer (Cornerstone3D with Tools)</h2>
-      <div style={{ marginBottom: 16 }}>
+    <div style={{width:'100vw', display:'flex', flexDirection:'column',alignItems:'center',marginTop:30 }}>
+      <h1>DICOM Viewer</h1>
+      <div style={{ margin: 16 }}>
         <button onClick={addViewer} style={{ marginRight: 8 }}>
           Add Viewer
         </button>
-        <span style={{ color: '#666', fontSize: 14 }}>
+        <span style={{ color: '#666', fontSize: 20 }}>
           Viewers: {viewers.length} | 
           Synced: {viewers.filter(v => v.sync).length}
         </span>
@@ -220,6 +220,7 @@ const Home: React.FC = () => {
       <div
         style={{
           display: 'flex',
+          justifyContent:'center',
           flexWrap: 'wrap',
           gap: 12,
           marginTop: 16,
