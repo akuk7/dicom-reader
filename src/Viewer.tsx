@@ -242,7 +242,7 @@ const Viewer: React.FC<ViewerProps> = ({
               position: 'absolute',
               top: '50vh',
               left: '50vw',
-              // transform: 'translate(-50%, -50%)',
+              transform: 'translate(-50%, -50%)',
               color: 'white',
               fontSize: 12,
               pointerEvents: 'none',
@@ -271,6 +271,25 @@ const Viewer: React.FC<ViewerProps> = ({
             }}
           >
             {error}
+          </div>
+        )}
+        {sync && (
+          <div
+            style={{
+              position: 'absolute',
+              top: 8,
+              right: 8,
+              backgroundColor: 'rgba(54, 60, 56, 0.8)',
+              color: 'white',
+              padding: '4px 8px',
+              borderRadius: '4px',
+              fontSize: '12px',
+              fontWeight: 'bold',
+              pointerEvents: 'none',
+              zIndex: 10,
+            }}
+          >
+            SYNC
           </div>
         )}
       </div>

@@ -205,7 +205,7 @@ const Home: React.FC = () => {
   }
 
   return (
-    <div style={{width:'100vw', display:'flex', flexDirection:'column',alignItems:'center',marginTop:30 }}>
+    <div style={{width:'100vw', display:'flex', flexDirection:'column',alignItems:'center',marginTop:50 ,alignSelf:'flex-start'}}>
       <h1>DICOM Viewer</h1>
       <div style={{ margin: 16 }}>
         <button onClick={addViewer} style={{ marginRight: 8 }}>
