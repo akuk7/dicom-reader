@@ -4,7 +4,7 @@ import Home from "./Home"
 
 const App:React.FC = ()=>{
 return(
-  <BrowserRouter>
+  <BrowserRouter basename="/dicom-reader">
   <Routes>
     <Route path="/" element={<Home />} />
   </Routes>
