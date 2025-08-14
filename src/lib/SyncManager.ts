@@ -2,7 +2,6 @@ import { SynchronizerManager } from '@cornerstonejs/tools';
 import { Enums, StackViewport } from '@cornerstonejs/core';
 
 const SYNC_KEY = 'zoomSync';
-const renderingEngineId = 'myRenderingEngine';
 
 let synchronizer :any= SynchronizerManager.getSynchronizer(SYNC_KEY);
 let sharedRenderingEngine: any = null;
@@ -22,7 +21,7 @@ function initializeSynchronizer() {
       SYNC_KEY,
       Enums.Events.CAMERA_MODIFIED,
       (
-        event: any,
+        _event: any,
         sourceViewport: { renderingEngineId: string; viewportId: string },
         targetViewport: { renderingEngineId: string; viewportId: string }
       ) => {

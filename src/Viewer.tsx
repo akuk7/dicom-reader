@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { addToSync, getSyncedViewports, removeFromSync } from './lib/SyncManager';
+import { addToSync, removeFromSync } from './lib/SyncManager';
 import { Enums, StackViewport, RenderingEngine, imageLoader } from '@cornerstonejs/core';
 import { ToolGroupManager, ZoomTool, PanTool, addTool, Enums as csToolsEnums } from '@cornerstonejs/tools';
 
