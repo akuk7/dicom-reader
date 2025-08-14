@@ -8,7 +8,6 @@ export default defineConfig({
     // for dicom-parser
     viteCommonjs(),
   ],
-  base:'/dicom-reader',
   // seems like only required in dev mode
   optimizeDeps: {
     exclude: ['@cornerstonejs/dicom-image-loader'],
