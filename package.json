@@ -16,6 +16,7 @@
     "dicomweb-client": "^0.11.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.0",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
