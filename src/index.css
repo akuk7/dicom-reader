@@ -29,8 +29,9 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  min-width: 320px;
   min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 h1 {

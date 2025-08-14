@@ -2,13 +2,13 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { viteCommonjs } from '@originjs/vite-plugin-commonjs';
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [
     react(),
     // for dicom-parser
     viteCommonjs(),
   ],
-  base:'/dicom-reader/',
+  base: command === 'build' ? '/dicom-reader/' : '/',
   // seems like only required in dev mode
   optimizeDeps: {
     exclude: ['@cornerstonejs/dicom-image-loader'],
@@ -17,4 +17,4 @@ export default defineConfig({
   worker: {
     format: 'es',
   },
-});
+}));

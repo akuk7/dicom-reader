@@ -205,7 +205,7 @@ const Home: React.FC = () => {
   }
 
   return (
-    <div style={{width:'100vw', display:'flex', flexDirection:'column',alignItems:'center',marginTop:50 ,alignSelf:'flex-start'}}>
+    <div style={{width:'100vw', display:'flex', flexDirection:'column',alignItems:'center',justifyContent:'center',marginTop:50}}>
       <h1>DICOM Viewer</h1>
       <div style={{ margin: 16 }}>
         <button onClick={addViewer} style={{ marginRight: 8 }}>
@@ -216,16 +216,17 @@ const Home: React.FC = () => {
           Synced: {viewers.filter(v => v.sync).length}
         </span>
       </div>
-      
       <div
-        style={{
-          display: 'flex',
-          justifyContent:'center',
-          flexWrap: 'wrap',
-          gap: 12,
-          marginTop: 16,
-        }}
-      >
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    maxWidth:'100vw',
+    justifyContent: 'center', // centers items in available space
+    alignItems: 'flex-start',// 🔹 makes sure it uses full viewport width
+    boxSizing: 'border-box',
+    overflowX:'hidden'
+  }}
+>
         {viewers.map((viewer, i) => (
           <Viewer
             key={viewer.id}
